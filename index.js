@@ -24,7 +24,7 @@ app.get("/tasks", (req, res) => {
 });
 
 app.put("/change", (req, res) => {
-  const { id, usernames, tags, done, deadline, author } = req.body; // to change, all data together
+  const { id, usernames, tags, done, deadline, author } = req.body; // to change, all data together is must be written
   tasks.update({ id, usernames, tags, done, deadline, author });
   res.json({ id, usernames, tags, done, deadline, author });
 });
