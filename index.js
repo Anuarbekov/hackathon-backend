@@ -89,7 +89,7 @@ app.post("/info", (req, res) => {
       return;
     }
   }
-  infos.create(info, username); // if no, create
+  infos.create({info, username}); // if no, create
   res.json({ info, username });
 });
 
